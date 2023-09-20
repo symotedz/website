@@ -1,0 +1,31 @@
+{% load bootstrap5 %}
+{% load static %}
+
+{% block content %}
+   <!-- Start Call To Action Area -->
+   <section class="section call-action" id="contactus">
+    <div class="container">
+        <div class="row">
+            <div class="" style="display:flex; flex-direction:initial; ">
+                <div class="cta-content" style="margin-left: 0px;">
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Contact Us  <br>+254114241129
+                    </h2>
+                    <p class="wow fadeInUp" data-wow-delay=".4s">We love enquires and feedback from anyone across the word.</p>
+                    <p>Email: symotedz@gmail.com</p>
+                    <div class="button wow fadeInUp" data-wow-delay=".6s">
+                        <a href="{% url 'checkout' %}" class="btn">Purchase Now</a>
+                    </div>
+                </div>
+                <div class="wow fadeInUp form" >
+                    <form method='POST' action="" >
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <button type="submit" class="btn btn-primary">Enquire</button>
+                    </form>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Call To Action Area -->
+{% endblock content %}
